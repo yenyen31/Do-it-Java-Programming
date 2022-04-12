@@ -2,7 +2,7 @@
 
 ### Do it Java Programming 입문 - 박은종 지음.이지스 퍼블리싱
 
-### 2022/3/25-ing
+### 2022/3/25-ing, 꽉java 스터디
 
 #
 
