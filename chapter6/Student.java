@@ -1,38 +1,25 @@
-package cooperation;
+package staticex;
 
-public class Student 
-{
+public class Student {
 
+	private static int serialNum = 10000;
+	
+	int studentID;
 	String studentName;
-	int grade;
-	int money;
 	
-	public Student(String studentName, int money)
-	{
-		this.studentName = studentName;
-		this.money = money;
+	public Student() { // 학생이 추가될 떄 마다 학번을 증가시키고 싶음
+		serialNum++;
+		studentID = serialNum;
 	}
-	
-	// 버스 타는 행위
-	public void takeBus(Bus bus) 
-	{
-		bus.take(1000); // 객체의 협업이 일어난 부분
-		money -= 1000;
+
+	public static int getSerialNum() {
+		int i = 10; // 지역변수
+		i++;
+		System.out.println(i);
+		
+		// studentName = "박보검"; // 멤버변수, 인스턴스변수
+		
+		return serialNum; // static변수, 클래스 변수
 	}
-	
-	// 지하철 타는 행위
-	public void takeSubway(Subway subway) 
-	{
-		subway.take(1500); // 객체의 협업이 일어난 부분
-		money -= 1500;
-	}
-	
-	public void shoeInfo() 
-	{
-		System.out.println(studentName + "님의 남은 돈은" + money + "입니다.");
-	}
-	
 	
 }
-
-
